@@ -1,0 +1,14 @@
+.champs-container{
+  display: flex;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 60vw;
+
+  & > .champion-card {
+    margin-right: 5px;
+  }
+  & > .champion-card:last-child{
+    margin-right: 0;
+  }
+}

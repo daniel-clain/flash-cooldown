@@ -1,0 +1,84 @@
+
+.champion-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1;
+
+  & > * {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  & > *:last-child{
+    margin-bottom: 0px;
+  }
+  
+  .champ-image{ 
+    background-size: auto 100%;
+    background-position-x: center;   
+    background-repeat: no-repeat;
+    flex: 3;
+  }
+  .flash-wrapper{
+    background-image: url('/images/flash.png');
+    background-size: cover;
+    background-position-x: center;   
+    background-repeat: no-repeat;
+    position: relative;
+    flex: 2;
+    .count-down-overlay{
+      position: absolute;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+
+      .countdown-val{
+        margin: auto;
+        color: white;
+        font-size: 50px;
+      }
+    }
+  }
+
+  .adjust-timer-wrapper {
+    flex: 1;
+    display: flex;
+    button {
+      flex: 1;
+      font-size: 8px;
+      vertical-align: top;
+      @media (min-width: 400px){
+        font-size: 10px;
+      }
+      @media (min-width: 700px){
+        font-size: 14px;
+      }
+    }
+  }
+  .variables-wrapper {
+    flex: 1;
+    display: flex;
+    & > * {
+      background-size: auto 100%;
+      background-position-x: center;   
+      background-repeat: no-repeat;      
+      width: 100%;
+    }
+    .boots-of-lucidity{
+      background-image: url('/images/boots_of_lucidity.jpg');
+    }
+    .cosmic-insight{
+      background-image: url('/images/cosmic_insight.png');
+    }
+  }
+}
